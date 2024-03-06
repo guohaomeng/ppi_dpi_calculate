@@ -1,18 +1,23 @@
-# Vue 3 + TypeScript + Vite
+# PPI计算工具、屏幕缩放倍数与DPI互转工具
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+帮助你找到最适合你显示器的屏幕缩放倍数，仅限Windows
 
-## Recommended IDE Setup
+觉得缩放倍数过高或者过低？来算算哪个值适合自己的显示器吧。
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+![1709720414766](image/README/1709720414766.png)
 
-## Type Support For `.vue` Imports in TS
+![1709720439217](image/README/1709720439217.png)
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+![1709720050677](image/README/1709720050677.png)
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+## DPI与缩放比换算公式
 
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+DPI = 缩放比 - 四舍五入(缩放比 / 25)
+
+缩放比 = DPI + 四舍五入(DPI / 24)
+
+当 DPI = PPI时，屏幕显示比例等于真实值。
+
+当 DPI > PPI 时，屏幕显示比例大于真实值。
+
+当 DPI < PPI 时，屏幕显示比例小于真实值。
