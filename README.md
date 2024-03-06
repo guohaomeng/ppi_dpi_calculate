@@ -4,6 +4,8 @@
 
 觉得缩放倍数过高或者过低？来算算哪个值适合自己的显示器吧。
 
+[在线演示地址](https://guohaomeng.github.io/ppi_dpi_calculate/)
+
 ![1709720414766](image/README/1709720414766.png)
 
 ![1709720439217](image/README/1709720439217.png)
